@@ -10,8 +10,7 @@ any setup instructions and clarifying comments.
 
 **Technical Challenge**
 
-Recently there was an issue with the keyword filtering on our website, so we are looking to
-automate that scenario for production regression testing.
+Recently there was an issue with the keyword filtering on our website, so we are looking to automate that scenario for production regression testing.
 The end to end test is to be as follows: 
 1. User is to open Daft homepage (www.daft.ie ),
 2. search for a Sale Ad in county Dublin -> check that there are results for this location,
@@ -24,6 +23,20 @@ Optional task:
 Add in a simple CI/CD pipeline that would run that test scheduled or on push.
 
 ---
-Stack: Playwright with Typescript using POM (Page Object Model)
+Stack: Playwright with Typescript using POM (Page Object Model) design pattern
 
 This repo assumes you have installed `node.js` and `npm`
+
+---
+**Challanges**
+1. When trying to use `data-testid="description"` on ad page it turns out Playwright finds to instances of this id, to make things a bit simpler I just used `getByText('garage')).toBeVisible()` to chech if there is a garage mention on the ads page
+2. 
+
+**TODO**
+1. Refactor this method so it can be used with any result in the list
+`
+async tapOnFirstResult(){
+    await this.resultsList.first().click();
+}
+`
+
