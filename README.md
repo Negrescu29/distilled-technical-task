@@ -29,16 +29,15 @@ This repo assumes you have installed `node.js` and `npm`
 
 ---
 **Challanges**
-1. When trying to use `data-testid="description"` on ad page it turns out Playwright finds to instances of this id, to make things a bit simpler I just used `getByText('garage')).toBeVisible()` to chech if there is a garage mention on the ads page
-2. 
+1. When trying to use `data-testid="description"` on sale ad page it turns out Playwright finds to instances of this `id`, to make things a bit simpler I just used `getByText('garage')).toBeVisible()` to chech if there is a garage mention on the sale ads page
 
 **TODO**
 1. Refactor this method so it can be used with any result in the list
-`
+```
 async tapOnFirstResult(){
     await this.resultsList.first().click();
 }
-`
+```
 
-2. I think there are more sofisticated ways to validate the amount of results returned for a searched location. At the moment I'm expecting to see a text `'402 Properties for Sale in Dublin (County)'` also I check if the `[data-testid="search-h1"]` is visible and `ul[data-testid="results"] li` results list is also visible
+1. I think there are more sofisticated ways to validate the amount of results returned for a searched location. At the moment I'm expecting to see a text `'402 Properties for Sale in Dublin (County)'` also I check if the `[data-testid="search-h1"]` is visible and `ul[data-testid="results"] li` results list is also visible
 
