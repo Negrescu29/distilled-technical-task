@@ -11,16 +11,19 @@ export class HomePage {
         this.searchField = page.getByTestId('county-area-filter');
     }
 
-    // loading the daft.ie web page and accepting T&C
+    /**
+     * this method load the daft.ie web page and accepting T&C
+     */
     async load() {
         await this.page.goto('https://www.daft.ie/');
         await this.termsAndCondition.click();
     }
 
-    /* 
-    searching for a location that takes a string as a parameter
-    in our case that will be Dublin County
-    */
+    /**
+     * this method takes a string as a parameter that will be used for searching a location
+     * in our case that will be Dublin County
+     * @param location 
+     */
     async searchForLocation(location: string) {
         await this.searchField.fill(location);
         await this.searchField.press('Enter');
