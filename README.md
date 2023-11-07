@@ -40,3 +40,5 @@ async tapOnFirstResult(){
 }
 `
 
+2. I think there are more sofisticated ways to validate the amount of results returned for a searched location. At the moment I'm expecting to see a text `'402 Properties for Sale in Dublin (County)'` also I check if the `[data-testid="search-h1"]` is visible and `ul[data-testid="results"] li` results list is also visible
+
