@@ -22,3 +22,8 @@ The end to end test is to be as follows:
 
 Optional task:
 Add in a simple CI/CD pipeline that would run that test scheduled or on push.
+
+---
+Stack: Playwright with Typescript using POM (Page Object Model)
+
+This repo assumes you have installed `node.js` and `npm`
