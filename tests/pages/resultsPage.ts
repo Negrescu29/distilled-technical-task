@@ -1,6 +1,6 @@
 import { type Locator, type Page } from '@playwright/test';
 
-export class HomePage {
+export class ResultsPage {
     readonly page: Page;
     readonly filtersModal: Locator;
     readonly termsInputText: Locator;
