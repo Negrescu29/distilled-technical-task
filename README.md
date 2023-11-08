@@ -9,8 +9,9 @@ Table of contents:
 6. [Installation](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#installation)
 7. [Run the tests](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#run-the-tests)
 8. [CI / CD pipeline](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#cicd-pipeline)
-9. [Challanges](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#challanges)
-10. [Next steps for improvement](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#next-steps-for-improvement)
+9. [Demo](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#demo)
+10. [Challanges](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#challanges)
+11. [Next steps for improvement](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#next-steps-for-improvement)
 
 <h3>Overview</h3>
 
@@ -92,6 +93,12 @@ npx playwright test --project=chromium
 
 - on push: https://github.com/Negrescu29/distilled-technical-task/actions/runs/6793393404
 
+<h3>Demo</h3>
+
+![test-headed-mode](https://github.com/Negrescu29/distilled-technical-task/assets/26310646/48e0ba15-8101-4328-b511-20b5c2776196)
+
+
+---
 
 <h3>Challanges</h3>
 
@@ -136,6 +143,8 @@ async tapOnFirstResult(){
 </pre>
 
 2. I think there are more sophisticated ways to validate the amount of results returned for a searched location. At the moment I'm expecting to see the text `402 Properties for Sale in Dublin (County)` Also I check if the `[data-testid="search-h1"]` is visible and `ul[data-testid="results"] li.first()` results list is also visible
+![why hardcoding the results is not a good idea](https://github.com/Negrescu29/distilled-technical-task/assets/26310646/2e07f3d6-4f32-4749-b5ef-eee8144882a7)
+
 
 3. Find a better way to manage cookie popups than just clicking on accepting it because the test was once flaky CI/CD pipeline
 
