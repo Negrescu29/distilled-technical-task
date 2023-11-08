@@ -2,7 +2,12 @@ import { test as base } from '@playwright/test';
 import { ResultsPage } from '../pages/resultsPage';
 import { SaleAdPage } from '../pages/saleAdPage';
 import { HomePage } from '../pages/homePage';
-import { DaftFixtures } from './DaftFixtures';
+
+type DaftFixtures = {
+    homePage: HomePage;
+    resultsPage: ResultsPage;
+    saleAdPage: SaleAdPage;
+};
 
 export const test = base.extend<DaftFixtures>({
 
