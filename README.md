@@ -82,9 +82,10 @@ This repo assumes you have installed `node.js` and `npm`
 async tapOnFirstResult(){
     await this.resultsList.first().click();
 }
+</pre>
 
 2. I think there are more sophisticated ways to validate the amount of results returned for a searched location. At the moment I'm expecting to see the text `402 Properties for Sale in Dublin (County)` Also I check if the `[data-testid="search-h1"]` is visible and `ul[data-testid="results"] li.first()` results list is also visible
-</pre>
+
 
 2. I think there are more sophisticated ways to validate the amount of results returned for a searched location. At the moment I'm expecting to see the text `402 Properties for Sale in Dublin (County)` Also I check if the `[data-testid="search-h1"]` is visible and `ul[data-testid="results"] li.first()` results list is also visible
 
