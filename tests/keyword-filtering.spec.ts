@@ -1,4 +1,4 @@
-import { test, expect } from './fixtures/daft-test';
+import { test, expect } from './fixtures/daft-fixture';
 
 test.describe('Keyword filtering on daft website', () => {
     const location = 'Dublin County';
