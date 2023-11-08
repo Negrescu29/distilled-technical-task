@@ -1,18 +1,19 @@
 <h1 id="distilled-technical-task">distilled-technical-task</h1>
 <p>Table of contents:</p>
 <ol>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#overview">Overview</a></li>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#technical-challenge">Technical Challenge</a></li>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#expected-outcome">Expected outcome</a></li>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#optional-task">Optional task</a></li>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#stack">Stack</a></li>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#installation">Installation</a></li>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#run-the-tests">Run the tests</a></li>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#cicd-pipeline">CI / CD pipeline</a></li>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#demo">Demo</a></li>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#challanges">Challanges</a></li>
-<li><a href="https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#next-steps-for-improvement">Next steps for improvement</a></li>
+<li>Overview</a></li>
+<li>Technical Challenge</a></li>
+<li>Expected outcome</a></li>
+<li>Optional task</a></li>
+<li>Stack</a></li>
+<li>Installation</a></li>
+<li>Run the tests</a></li>
+<li>CI / CD pipeline</a></li>
+<li>Demo</a></li>
+<li>Challanges</a></li>
+<li>Next steps for improvement</a></li>
 </ol>
+
 <h3>Overview</h3>
 
 <p>The purpose of the assessment is to qualify the candidates for their expertise with automated
