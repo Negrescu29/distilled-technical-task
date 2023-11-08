@@ -32,7 +32,7 @@ export class ResultsPage {
      * this method clicks on first result in the list.
      * it can be refactored to take in a number that will click on an n-th result in the list
      */
-    async tapOnFirstResult() {
+    async clickOnFirstResult() {
         await this.resultsList.first().click();
     }
 
