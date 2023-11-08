@@ -43,8 +43,12 @@ This repo assumes you have installed `node.js` and `npm`
 
 
 <h3>Challanges</h3>
-1. When trying to use `data-testid="description"` on sale ad page it turns out Playwright finds to instances of this `id`, to make things a bit simpler I just used `getByText('garage')).toBeVisible()` to chech if there is a garage mention on the sale ads page
-2. I tried to separate the tests and make them independent, atomic tests but for some reason, the tests kept failing. The first idea is something is wrong with how the page status is transmitted from test to test. Out of scope for now but I believe would be beneficial to have the test being independent and not block the whole flow. If something at an earlier stage fails the other functionality won't be tested.
+
+- When trying to use `data-testid="description"` on sale ad page it turns out Playwright finds to instances of this `id`, to make things a bit simpler I just used `getByText('garage')).toBeVisible()` to chech if there is a garage mention on the sale ads page.
+
+
+- I tried to separate the tests and make them independent, atomic tests but for some reason, the tests kept failing. The first idea is something is wrong with how the page status is transmitted from test to test. Out of scope for now but I believe would be beneficial to have the test being independent and not block the whole flow. If something at an earlier stage fails the other functionality won't be tested.
+  
 <pre>
     
     test.describe('test suite', () => {
@@ -62,6 +66,13 @@ This repo assumes you have installed `node.js` and `npm`
     });
 
 </pre>
+
+- Because of the wrong naming of page files (I had the name **page** in the file name)  GitHub actions weren't able to find a module and it failed. Managed to fix and run the test on pull_request.
+
+<img width="784" alt="Screenshot 2023-11-08 at 04 08 59" src="https://github.com/Negrescu29/distilled-technical-task/assets/26310646/09f92dc3-d083-40fd-9a19-324da18ffbb4">
+
+<img width="1493" alt="Screenshot 2023-11-08 at 04 02 32" src="https://github.com/Negrescu29/distilled-technical-task/assets/26310646/0a79ced4-1389-4d00-a25e-0169dc8ec72f">
+
 
 
 <h3>Ideas for improvement</h3>
