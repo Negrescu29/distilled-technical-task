@@ -1,4 +1,4 @@
-import { type Locator, type Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 
 export class SaleAdPage {
     readonly page: Page;
@@ -15,7 +15,6 @@ export class SaleAdPage {
      * @param keyword 
      */
     async expectKeywordVisible(keyword: string) {
-        await this.keyword.isVisible();
-
+        await expect(this.keyword).toBeVisible();
     }
 }
