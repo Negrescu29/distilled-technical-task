@@ -18,7 +18,7 @@ export class HomePage {
      */
     async load() {
         await this.page.goto('https://www.daft.ie/');
-        await this.termsAndCondition.click();
+        //await this.termsAndCondition.click();
     }
 
     /**
