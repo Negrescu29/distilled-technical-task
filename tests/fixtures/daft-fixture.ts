@@ -1,11 +1,11 @@
 import { test as base } from '@playwright/test';
-import { ResultsPage } from '../Pages/resultsPage';
+import * as resultsPage from '../Pages/resultsPage';
 import { SaleAdPage } from '../Pages/saleAdPage';
 import { HomePage } from '../Pages/homePage';
 
 type DaftFixtures = {
     homePage: HomePage;
-    resultsPage: ResultsPage;
+    resultsPage: resultsPage.ResultsPage;
     saleAdPage: SaleAdPage;
 };
 
@@ -16,7 +16,7 @@ export const test = base.extend<DaftFixtures>({
     },
 
     resultsPage: async ({ page }, use) => {
-        await use(new ResultsPage(page));
+        await use(new resultsPage.ResultsPage(page));
     },
 
     saleAdPage: async ({ page }, use) => {
