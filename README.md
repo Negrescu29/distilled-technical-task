@@ -36,7 +36,7 @@ This repo assumes you have installed `node.js` and `npm`
 - `npx playwright test` - run tests in headless mode. Runs the end-to-end tests. By default, the tests are run in parallel.
 - `npx playwright test --workers 1` - run the tests with one worker.
 - `npx playwright test --ui` - starts the interactive UI mode.
-- `npx playwright test --project=chromium`  - runs the tests only on Desktop Chrome. check **playwright.config.ts** for more details about browesers
+- `npx playwright test --project=chromium`  - runs the tests only on Desktop Chrome. check **playwright.config.ts** for more details about browsers
 
 
 ---
@@ -44,6 +44,25 @@ This repo assumes you have installed `node.js` and `npm`
 
 <h3>Challanges</h3>
 1. When trying to use `data-testid="description"` on sale ad page it turns out Playwright finds to instances of this `id`, to make things a bit simpler I just used `getByText('garage')).toBeVisible()` to chech if there is a garage mention on the sale ads page
+2. I tried to separate the tests and make them independent, atomic tests but for some reason, the tests kept failing. The first idea is something is wrong with how the page status is transmitted from test to test. Out of scope for now but I believe would be beneficial to have the test being independent and not block the whole flow. If something at an earlier stage fails the other functionality won't be tested.
+<pre>
+    
+    test.describe('test suite', () => {
+
+    test('test 1', async ({ }) => {
+     ...
+    });
+    
+    test('test 2', async ({ }) => {
+     ...
+    });
+    
+    test('test 3', async ({ }) => {
+     ...
+    });
+
+</pre>
+
 
 <h3>Ideas for improvement</h3>
 1. Refactor this method so it can be used with any result in the list
@@ -54,4 +73,5 @@ async tapOnFirstResult(){
 </pre>
 
 2. I think there are more sophisticated ways to validate the amount of results returned for a searched location. At the moment I'm expecting to see the text `402 Properties for Sale in Dublin (County)` Also I check if the `[data-testid="search-h1"]` is visible and `ul[data-testid="results"] li.first()` results list is also visible
+
 
