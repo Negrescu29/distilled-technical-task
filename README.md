@@ -1,5 +1,18 @@
 # distilled-technical-task
-<h1>Overview</h1>
+
+Table of contents:
+1. [Overview](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#overview)
+2. [Technical Challenge](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#technical-challenge)
+3. [Expected outcome](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#expected-outcome)
+4. [Optional task](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#optional-task)
+5. [Stack](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#stack)
+6. [Installation](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#installation)
+7. [Run the tests](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#run-the-tests)
+8. [CI / CD pipeline](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#cicd-pipeline)
+9. [Challanges](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#challanges)
+10. [Next steps for improvement](https://github.com/Negrescu29/distilled-technical-task/edit/add-playwright/README.md#next-steps-for-improvement)
+
+<h3>Overview</h3>
 
 The purpose of the assessment is to qualify the candidates for their expertise with automated
 testing.
@@ -9,7 +22,7 @@ any testing framework and programming language you are comfortable with. Please 
 any setup instructions and clarifying comments.
 
 
-<h1>Technical Challenge</h1>
+<h3>Technical Challenge</h3>
 
 Recently there was an issue with the keyword filtering on our website, so we are looking to automate that scenario for production regression testing.
 The end to end test is to be as follows: 
@@ -18,7 +31,7 @@ The end to end test is to be as follows:
 3. apply the “garage” keyword filter -> check that there are results for that filter, then
 4. open one search result -> check that the filter was applied correctly (check that the “garage” keyword is there on that advert).
 
-<h1>Expected outcome</h1>
+<h3>Expected outcome</h3>
 A Github repo with the source code and set up instructions
 
 <h3>Optional task</h3>
@@ -31,15 +44,53 @@ Playwright with Typescript using POM (Page Object Model) design pattern
 
 This repo assumes you have installed `node.js` and `npm`
 
-<h3>How to run tests</h3>
-
-- `npx playwright test` - run tests in headless mode. Runs the end-to-end tests. By default, the tests are run in parallel.
-- `npx playwright test --workers 1` - run the tests with one worker.
-- `npx playwright test --ui` - starts the interactive UI mode.
-- `npx playwright test --project=chromium`  - runs the tests only on Desktop Chrome. check **playwright.config.ts** for more details about browsers
 
 
----
+### Installation
+
+1. Clone the repo using below URL
+
+```sh
+https://github.com/Negrescu29/distilled-technical-task
+```
+
+2. Navigate to the folder and install npm packages using:
+
+```sh
+npm install
+```
+
+<h3>Run the tests</h3>
+
+Run tests in headless mode. Runs the end-to-end tests. By default, the tests are run in parallel.
+
+```sh
+npx playwright test
+```
+
+Run the tests with one worker.
+
+```sh
+npx playwright test --workers 1
+```
+
+Starts the interactive UI mode.
+
+```sh
+npx playwright test --ui
+```
+
+Runs the tests only on Desktop Chrome. check **playwright.config.ts** for more details about browsers
+
+```sh
+npx playwright test --project=chromium
+```
+
+<h3>CI/CD pipeline</h3>
+
+- on pull_request: https://github.com/Negrescu29/distilled-technical-task/actions/runs/6793367378
+
+- on push: https://github.com/Negrescu29/distilled-technical-task/actions/runs/6793393404
 
 
 <h3>Challanges</h3>
@@ -75,7 +126,7 @@ This repo assumes you have installed `node.js` and `npm`
 
 
 
-<h3>Ideas for improvement</h3>
+<h3>Next steps for improvement</h3>
 
 1. Refactor this method so it can be used with any result in the list
 <pre>
@@ -87,5 +138,7 @@ async tapOnFirstResult(){
 2. I think there are more sophisticated ways to validate the amount of results returned for a searched location. At the moment I'm expecting to see the text `402 Properties for Sale in Dublin (County)` Also I check if the `[data-testid="search-h1"]` is visible and `ul[data-testid="results"] li.first()` results list is also visible
 
 3. Find a better way to manage cookie popups than just clicking on accepting it because the test was once flaky CI/CD pipeline
+
+
 
 
