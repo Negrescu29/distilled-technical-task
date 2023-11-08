@@ -1,7 +1,7 @@
 import { test as base } from '@playwright/test';
-import { HomePage } from '../pages/homePage';
-import { ResultsPage } from '../pages/resultsPage';
-import { SaleAdPage } from '../pages/saleAdPage';
+import { HomePage } from '../pages/home-page';
+import { ResultsPage } from '../pages/results';
+import { SaleAdPage } from '../pages/sale-ad';
 
 type DaftFixtures = {
     homePage: HomePage;
