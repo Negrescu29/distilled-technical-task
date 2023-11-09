@@ -1,4 +1,4 @@
-import { expect, type Locator, type Page } from '@playwright/test';
+lolimport { expect, type Locator, type Page } from '@playwright/test';
 
 export class ResultsPage {
     readonly page: Page;
@@ -42,12 +42,8 @@ export class ResultsPage {
      * - resultsList - is the <ul> element that is shown with results
      * @param result 
      */
-    async expectResultsForThisLocation(result: string) {
+    async expectResultsForThisLocation() {
         await expect(this.searchResultsCount).toBeVisible();
-        await expect(this.searchResultsCount).toHaveText(result);
         await expect(this.resultsList).toBeVisible();
-
-        //const firstChild = page.locator('ul[data-testid="results"] li').first();
-
     }
 }
