@@ -2,6 +2,7 @@ import { test, expect } from './fixtures/daft-fixture';
 
 test.describe('Keyword filtering on daft website', () => {
     const location = 'Dublin County';
+    const keyword = 'garage';
 
     test('Check keyword filtered sell ads are return in the result list', async (
         { homePage, resultsPage, saleAdPage }) => {
@@ -25,7 +26,7 @@ test.describe('Keyword filtering on daft website', () => {
         await resultsPage.clickOnFirstResult();
 
         // check for `garage` on sale ad page
-        await saleAdPage.expectKeywordVisible('Garage');
+        await saleAdPage.expectKeywordVisible(keyword);
     });
 
 });
