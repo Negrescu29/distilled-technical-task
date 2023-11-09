@@ -25,7 +25,7 @@ test.describe('Keyword filtering on daft website', () => {
         await resultsPage.clickOnFirstResult();
 
         // check for `garage` on sale ad page
-        await saleAdPage.expectKeywordVisible('garage');
+        await saleAdPage.expectKeywordVisible('Garage');
     });
 
 });
