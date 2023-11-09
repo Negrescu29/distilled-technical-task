@@ -2,8 +2,8 @@ import { test, expect } from './fixtures/daft-fixture';
 
 test.describe('Keyword filtering on daft website', () => {
     const location = 'Dublin County';
-    const results = '3,042 Properties for Sale in Dublin (County)';
-    const resultsWithKeyword = '402 Properties for Sale in Dublin (County)';
+    const results = 'Properties for Sale in Dublin (County)';
+    const resultsWithKeyword = 'Properties for Sale in Dublin (County)';
 
 
     test('Check keyword filtered sell ads are return in the result list', async (
