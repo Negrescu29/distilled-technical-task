@@ -6,7 +6,7 @@ export class SaleAdPage {
 
     constructor(page: Page) {
         this.page = page;
-        this.keyword = page.locator('text=garage');
+        this.keyword = page.locator('[data-testid="description"]');
     }
 
     /**
@@ -15,6 +15,7 @@ export class SaleAdPage {
      * @param keyword 
      */
     async expectKeywordVisible(keyword: string) {
-        await expect(this.keyword).toBeVisible();
+        await expect(this.keyword).toContainText(keyword);
+        //await expect(this.keyword).toBeVisible();
     }
 }
