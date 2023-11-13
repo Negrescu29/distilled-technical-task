@@ -6,7 +6,7 @@ export class SaleAdPage {
 
     constructor(page: Page) {
         this.page = page;
-        this.keyword = page.locator('.styles__StandardParagraph-sc-15fxapi-8');
+        this.keyword = page.locator('.styles__StandardParagraph-sc-15fxapi-8.eMCuSm');
     }
 
     /**
