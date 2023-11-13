@@ -15,7 +15,11 @@ export class SaleAdPage {
      * @param keyword 
      */
     async expectKeywordVisible(keyword: string) {
-        await expect(this.keyword).toContainText(keyword);
+        // Get the text content of the description element
+        const elementText = await this.keyword.textContent();
+
+        // Check if the keyword exists in the text
+        await expect(elementText).toContain(keyword);
         //await expect(this.keyword).toBeVisible();
     }
 }

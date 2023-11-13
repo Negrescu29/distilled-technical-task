@@ -3,6 +3,7 @@ import { test, expect } from './fixtures/daft-fixture';
 test.describe('Keyword filtering on daft website', () => {
     const location = 'Dublin County';
     const keyword = 'Garage';
+    const description
 
     test('Check keyword filtered sell ads are return in the result list', async (
         { homePage, resultsPage, saleAdPage }) => {
