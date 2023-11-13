@@ -18,8 +18,10 @@ export class SaleAdPage {
         // Get the text content of the description element
         const elementText = await this.keyword.textContent();
 
+        await expect(new RegExp(`\\b${keyword}\\b`).test(elementText)).toBeTruthy();
+
         // Check if the keyword exists in the text
-        await expect(elementText).toContain(keyword);
+        //await expect(elementText).toContain(keyword);
         //await expect(this.keyword).toBeVisible();
     }
 }
