@@ -2,9 +2,7 @@ import { test, expect } from './fixtures/daft-fixture';
 
 test.describe('Keyword filtering on daft website', () => {
     const location = 'Dublin County';
-    const results = 'Properties for Sale in Dublin (County)';
-    const resultsWithKeyword = 'Properties for Sale in Dublin (County)';
-
+    const keyword = 'Garage';
 
     test('Check keyword filtered sell ads are return in the result list', async (
         { homePage, resultsPage, saleAdPage }) => {
@@ -16,19 +14,19 @@ test.describe('Keyword filtering on daft website', () => {
         await homePage.searchForLocation(location);
 
         // check that there are results for this location
-        await resultsPage.expectResultsForThisLocation(results);
+        await resultsPage.expectResultsForThisLocation();
 
         // filter results using Garage keyword
         await resultsPage.searchForKeyword('garage');
 
         // check that there are results for this keyword
-        await resultsPage.expectResultsForThisLocation(resultsWithKeyword);
+        await resultsPage.expectResultsForThisLocation();
 
         // open first ad from the results list
         await resultsPage.clickOnFirstResult();
 
         // check for `garage` on sale ad page
-        await saleAdPage.expectKeywordVisible('garage');
+        await saleAdPage.expectKeywordVisible(keyword);
     });
 
 });
