@@ -15,7 +15,7 @@ export class SaleAdPage {
      * @param keyword 
      */
     async expectKeywordVisible(keyword: string) {
-        await expect(this.keyword).toContainText(keyword);
+        await expect(this.keyword).toContainText(/keyword/);
         //await expect(this.keyword).toBeVisible();
     }
 }
